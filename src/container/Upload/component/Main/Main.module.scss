@@ -1,0 +1,177 @@
+.main {
+    color: #070707;
+    .header {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #efefef;
+        height: 200px;
+
+        .header-wrapper {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .header-avatar {
+                width: 120px;
+                height: 120px;
+                margin-right: 24px;
+            }
+            .header-info-wrapper {
+                flex: 1;
+
+                .header-tz {
+                    position: absolute;
+                    background-color: #ff2e43;
+                    color: #fff;
+                    width: 60px;
+                    height: 60px;
+                    font-size: 2.2rem;
+                    top: 0;
+                    right: 68px;
+                    text-align: center;
+                    line-height: 60px;
+                    margin: auto 0;
+
+                    &::after {
+                        content: '';
+                        border-width: 20px 30px;
+                        border-style: solid;
+                        border-color: #ff2e43 transparent transparent
+                            transparent;
+                        position: absolute;
+                        right: 0px;
+                        top: 60px;
+                    }
+                }
+                .header-hr {
+                    @extend .header-tz;
+                    right: 0;
+                    background-color: #2233ff;
+
+                    &::after {
+                        border-color: #2233ff transparent transparent
+                            transparent;
+                    }
+                }
+            }
+            .header-title {
+                font-size: 3rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .header-author {
+                display: flex;
+                margin-bottom: 20px;
+                .header-author-name {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+
+                .header-author-jobs {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: #8c8c8c;
+                    margin-left: 30px;
+                }
+            }
+
+            .header-button-list {
+                display: flex;
+                .header-button {
+                    font-size: 1.2rem;
+
+                    .button-icon {
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 4px;
+                    }
+
+                    &:last-child {
+                        margin-left: auto;
+                    }
+                }
+                &:last-child {
+                    flex: 1;
+                    display: flex;
+                    justify-self: flex-end;
+                }
+            }
+        }
+    }
+    .body {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #efefef;
+        padding: 50px 0;
+        .body-wrapper {
+            width: 90%;
+
+            .body-video {
+                img {
+                    width: 100%;
+                }
+                margin-bottom: 40px;
+            }
+            .body-des {
+                font-size: 1.4rem;
+                font-weight: 200;
+                line-height: 2.4rem;
+                text-align: left;
+                color: #070707;
+            }
+            .body-img-list {
+                .body-img {
+                    width: 100%;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+    .footer {
+        padding: 50px 0;
+        .footer-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-icon-list {
+            display: flex;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 300px;
+            color: var(--black-four);
+            margin-bottom: 30px;
+            .footer-icon {
+                margin-right: 18px;
+
+                img {
+                    margin-right: 4px;
+                }
+            }
+        }
+        .footer-date {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #8c8c8c;
+            margin-bottom: 40px;
+        }
+        .footer-button {
+            display: flex;
+            justify-content: center;
+
+            Button {
+                margin-right: 10px;
+
+                img {
+                    height: 12px;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

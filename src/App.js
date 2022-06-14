@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './container/Header';
+import Body from './container/Body';
+import Footer from './container/Footer';
+import Upload from './container/Upload';
+import { Modal, useModal } from './component/Modal';
+import Button from './component/Button';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {isShowing, toggle} = useModal();
+
+    return (
+        <div className="App">
+            <Modal isShowing={isShowing} hide={toggle}>
+                <Upload />
+            </Modal>
+            <Header />
+
+            <Button primary onClick={toggle} className='show-modal-btn'>
+                Show Modal
+            </Button>
+
+            <Body />
+            <Footer />
+            {/* <Modal>
+                <Upload />
+            </Modal> */}
+        </div>
+    );
 }
 
 export default App;

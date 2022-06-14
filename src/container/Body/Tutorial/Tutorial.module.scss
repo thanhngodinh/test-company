@@ -1,0 +1,163 @@
+.tutorial {
+    display: flex;
+    background-color: #efefef;
+
+    padding: 60px 0;
+    .tutorial-row {
+        margin: auto 0;
+
+        .intro {
+            height: 100%;
+            padding-left: 60px;
+            padding-right: 60px;
+
+            .title {
+                font-family: Montserrat;
+                font-size: 1.8rem;
+                letter-spacing: 1.8px;
+                font-weight: 500;
+                color: #292929;
+                text-transform: uppercase;
+                margin-bottom: 28px;
+            }
+
+            p {
+                font-size: 3.4rem;
+                line-height: 4rem;
+                font-weight: 500;
+                color: #070707;
+                margin-bottom: 55px;
+            }
+
+            Button {
+                letter-spacing: 1.2px;
+                width: 140px;
+            }
+        }
+
+        .video {
+            position: relative;
+            padding: 0 10px;
+
+            img:first-child {
+                margin: auto 0;
+                height: 300px;
+                width: 100%;
+                // object-fit: contain;
+            }
+
+            .play-icon {
+                position: absolute;
+                top: calc(50% - 25px);
+                left: calc(50% - 40px);
+            }
+
+            .live-icon {
+                position: absolute;
+                top: 10px;
+                left: 4px;
+            }
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            justify-content: space-between;
+            padding-left: 5px;
+            .item {
+                display: flex;
+                align-items: center;
+
+                img:first-child {
+                    height: 88px;
+                    width: 156px;
+                }
+
+                .description {
+                    flex: 1;
+                    padding-left: 22px;
+                    padding-right: 20px;
+
+                    .item-title {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: #070707;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: #070707;
+                    }
+
+                    .like-and-view {
+                        display: flex;
+                        justify-content: flex-start;
+
+                        .like-info {
+                            font-size: 12px;
+                            font-weight: 300;
+                            .like-icon {
+                                height: 12px;
+                                width: 14px;
+                                padding-right: 2px;
+                            }
+                        }
+
+                        .view-info {
+                            @extend .like-info;
+                            .view-icon {
+                                @extend .like-icon;
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 739px) {
+    .tutorial {
+        .tutorial-row {
+            .list {
+                height: unset;
+                width: 100%;
+                .item {
+                    padding-bottom: 12px;
+                    img:first-child {
+                        height: unset;
+                    }
+
+                    .description {
+                        padding-left: 8px;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tutorial {
+        .tutorial-row {
+            // padding: 20px 0;
+            .intro {
+                padding-bottom: 32px;
+            }
+
+            .video {
+                padding: 0 32px;
+                img:first-child {
+                    height: unset;
+                }
+            }
+
+            .list {
+                padding: 20px 32px 0;
+            }
+        }
+    }
+}

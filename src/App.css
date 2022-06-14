@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --black: #1A1A1A;
+  --tomato: #EA4913;
+  --cerulean: #0565BB;
+  --white-two: #EEEEEE;
+  --kelley-green: #00833F;
+  --lavender: #C6B8F5;
+  --dark-brown: #110E03;
+  --bright-orange-two: #FF5500;
+  --mango: #FFB225;
+  --tomato-two: #E84C33;
+  --bluish: #2584B3;
+  --sand: #DABB5E;
+  --copper: #C73C27;
+  --mango-two: #FFB227;
+  --eggshell: #FFFBD8;
+  --tomato-three: #E0412A;
+  --light-grey: #CED1C8;
+  --pinkish-grey: #D4C4AB;
+  --cloudy-blue: #B1D1CF;
+  --light-grey-two: #D8DAD7;
+  --mid-blue: #245FC5;
+  --greyish: #A9A9A9;
+  --sun-yellow: #FCD32A;
+  --black-four: #333333;
+  --dark: #1C2027;
+  --white-three: #F4F4F4;
+  --brownish-grey: #666666;
+  --pumpkin-orange: #FA7B26;
+  --pinkish-grey-two: #CCC8C6;
+  --white-four: #F1F1F1;
+  --dark-maroon: #020001;
+  --black-three: #222222;
+  --clear-blue: #157EFF;
+  --bright-orange: #F96400;
+  --goldenrod: #FCCB05;
+  --black-two: #111111;
+  --white: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    position: relative;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    text-rendering: optimizespeed;
+    color: var(--text-color);
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.show-modal-btn {
+    margin: 0 12px 12px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

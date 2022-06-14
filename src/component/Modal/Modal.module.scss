@@ -1,0 +1,66 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 7, 7, 0.4);
+}
+
+.modal {
+    --growth-from: 0.8;
+    --growth-to: 1;
+    z-index: 999;
+    background: white;
+    position: relative;
+    margin: 0 auto 4rem;
+    border-radius: 3px;
+    width: 80%;
+
+    animation: growth linear 0.2s;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-close-button {
+    border: none;
+    background: none;
+    // background-color: blue;
+    margin-right: 32px;
+    margin-top: 16px;
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

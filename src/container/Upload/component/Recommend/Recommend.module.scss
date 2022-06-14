@@ -1,0 +1,46 @@
+.recommend {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #efefef;
+
+    .recommend-wrapper {
+        width: 90%;
+
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+
+            .author-avatar {
+                height: 70px;
+                width: 70px;
+            }
+
+            .author-name {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: var(--black-three);
+            }
+        }
+    }
+
+    .list {
+        // height: 90%;
+        position: relative;
+
+        .item {
+            padding-right: 15px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        .right-arrow {
+            position: absolute;
+            top: calc(50% - 32px);
+            right: -4px;
+        }
+    }
+}

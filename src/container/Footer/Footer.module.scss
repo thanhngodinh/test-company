@@ -1,0 +1,119 @@
+.footer {
+    .footer1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #070707;
+        height: 40px;
+        color: var(--white);
+        font-size: 1.2rem;
+        font-weight: 200;
+
+        .contact {
+            display: flex;
+            margin-left: 30px;
+
+            .contact-title {
+                margin-right: 30px;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            margin-right: 18px;
+
+            .copyright {
+                margin-right: 30px;
+                color: #9b9b9b;
+            }
+
+            .icon {
+                width: 18px;
+                height: 14px;
+                object-fit: contain;
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .footer2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white);
+        height: 40px;
+        color: #fff;
+
+        .item-list {
+            display: flex;
+            font-size: 12px;
+            font-weight: 300;
+            color: #070707;
+            list-style: none;
+            margin-left: 30px;
+
+            .item {
+                margin-right: 12px;
+
+                .down {
+                    width: 12px;
+                    height: 8px;
+                    object-fit: contain;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .logo {
+            width: 180px;
+            height: 12px;
+            object-fit: contain;
+            margin-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 739px) {
+    .footer {
+        .footer1 {
+            display: block;
+            height: 52px;
+
+            .contact {
+                margin: 8px 12px;
+
+                .contact-title {
+                }
+
+                div:last-child {
+                    margin-left: auto;
+                }
+            }
+
+            .social {
+                .copyright {
+                    margin-left: 12px;
+                    margin-right: auto;
+                }
+
+                .icon {
+
+                    &:last-child {
+                        margin-right: 0;;
+                    }
+                }
+            }
+        }
+
+        .footer2 {
+            height: 60px;
+
+            .item-list {
+                display: none;
+            }
+        }
+    }
+}

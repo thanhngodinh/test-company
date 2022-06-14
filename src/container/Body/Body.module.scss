@@ -1,0 +1,60 @@
+.body {
+    .tag {
+        margin-bottom: 60px;
+        position: relative;
+        .tag-list {
+            overflow-x: scroll;
+            display: flex;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tag-item {
+                min-width: 200px;
+            }
+
+            .tag-active {
+                background-color: #ff2e43;
+                border-color: #ff2e43;
+            }
+        }
+        .tag-left {
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 32px;
+            width: 0;
+        }
+
+        .tag-right {
+            position: absolute;
+            top: calc(50% - 20px);
+            right: 32px;
+            width: 0;
+        }
+    }
+
+    .filter {
+        padding-left: 18px;
+
+        .filter-item {
+            font-size: 1.8rem;
+            font-weight: 300;
+            width: unset;
+            margin: 0 12px;
+        }
+        
+    }
+
+    .body-grid {
+        .body-row {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .body-col {
+                margin: 20px 0;
+                padding: 0 6px;
+            }
+        }
+    }
+}
